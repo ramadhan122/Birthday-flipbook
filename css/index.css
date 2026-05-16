@@ -205,6 +205,38 @@ p{
     transform: rotateZ(-5deg);
   }
 
+  /* Tombol pojok kanan bawah */
+    .coffee-btn{
+        position:fixed;
+        right:20px;
+        bottom:20px;
+
+        width:70px;
+        height:70px;
+
+        border-radius:50%;
+        background:#d8b28c;
+        border:3px solid #5a3418;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        cursor:pointer;
+        z-index:999;
+
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        transition:0.25s ease;
+    }
+
+    .coffee-btn:hover{
+        transform:scale(1.08);
+    }
+
+    .coffee-btn svg{
+        width:50px;
+        height:50px;
+    }
 
 /* Warna tiap balon */
 .b1 .balloon-body { background:#ff6b9d; box-shadow:inset -8px -6px 0 rgba(0,0,0,0.1); }
@@ -243,8 +275,20 @@ p{
   html, body{
     overflow-x:hidden;
     touch-action:pan-y;
+    height: 100%;
   }
 
+  .coffee-btn{
+    width:60px;
+    height:60px;
+    right:15px;
+    bottom:15px;
+  }
+
+  .coffee-btn svg{
+    width:42px;
+    height:42px;
+  }
   .book{
     width:260px;
     height:380px;
@@ -335,4 +379,5 @@ p{
     height:40px;
   }
 
+  
 }
