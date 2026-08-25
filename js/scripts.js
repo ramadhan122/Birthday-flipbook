@@ -111,6 +111,30 @@ document.addEventListener("mouseup", e => {
   endX = getX(e);
   handleSwipe();
 });
+// Blok seleksi teks
+document.addEventListener("selectstart", function (e) {
+  e.preventDefault();
+});
+
+// Blok klik kanan
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+// Blok drag
+document.addEventListener("dragstart", function (e) {
+  e.preventDefault();
+});
+
+// Blok shortcut copy
+document.addEventListener("keydown", function (e) {
+  if (
+    (e.ctrlKey || e.metaKey) &&
+    ["c", "x", "u", "s", "a"].includes(e.key.toLowerCase())
+  ) {
+    e.preventDefault();
+  }
+});
 
 /* ── FIXED SWIPE LOGIC ── */
 function handleSwipe(){

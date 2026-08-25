@@ -6,6 +6,7 @@ body{
   height:100vh;
   display:flex;
   justify-content:center;
+  cursor: default;
   align-items:center;
 }
 
@@ -380,4 +381,25 @@ p{
   }
 
   
+}
+
+/* Mencegah teks diseleksi/copy */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Gambar juga tidak bisa di-drag */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Teks tidak menerima klik */
+p,
+.cover-text {
+  pointer-events: none;
 }
